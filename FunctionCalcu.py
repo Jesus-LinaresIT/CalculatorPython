@@ -19,5 +19,11 @@ def multiplication(num1, num2):
 	print(f"\nThe result of operation Multiplication is: {result}")
 
 def division(num1, num2):
-	result = num1 / num2
-	print(f"\nThe result of operation Division is: {result}")
+
+	try:
+		result = num1 / num2
+		print(f"\nThe result of operation Division is: {result}")
+
+	except ZeroDivisionError:
+		print("\nCANNOT DIVIDE BY ZERO")
+		return "Error Operation"

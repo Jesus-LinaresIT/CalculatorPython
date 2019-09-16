@@ -11,33 +11,40 @@ print("-Substraction ---------> R")
 print("-Multiplication -------> M")
 print("-Division -------------> D")
 
-operation = input("\nType key of the Operation: ").lower()
+ope = input("\nType key of the Operation: ").lower()
 
 
-if operation != "s" and operation != "r" and operation != "m" and operation != "d":
-	print("\nERROR the Key.")	
-else:
-	numOne = float(input("\nType a number: "))
-	numTwo = float(input("Type other number: "))
+if ope != "s" and ope != "r" and ope != "m" and ope != "d":
+	print("\nERROR the Key.")
 
-	if operation == "s":
+else:	
+
+	while True:
+
+		try:
+			numOne = float(input("\nType a number: "))
+			numTwo = float(input("Type other number: "))
+			break
+
+		except ValueError:
+			print("\nThe values entered are not correct. Try again")
+
+	if ope == "s":
 	 	suma(numOne, numTwo)
 
-	elif operation == "r":
+	elif ope == "r":
 		resta(numOne, numTwo)
 		
-	elif operation == "m":
+	elif ope == "m":
 		multiplication(numOne, numTwo)
 		
-	elif operation == "d":		
+	elif ope == "d":		
 		if numOne == 0 and numTwo == 0:
-			print("\nResult is undefined")
-
-		elif numOne == 0 and numTwo != 0 or numOne != 0 and numTwo == 0:
-			print("\nCANNOT DIVIDE BY ZERO")
+			print("\nResult is undefined")			
 		else:
 			division(numOne, numTwo)
 			
 
-
 print("\nFinishid Operation...")
+
+print("\ncontinuation of program execution...")
