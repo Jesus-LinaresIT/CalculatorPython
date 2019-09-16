@@ -1,8 +1,10 @@
 import math
+from FunctionCalcu import suma, resta, multiplication, division, banner
 
-print("\nStarting calculator...")
 
-print("\n-------------Operations Math---------------")
+print("\nStarting calculator...\n")
+
+banner('Operations Math')
 
 print("\n-Sum ------------------> S")
 print("-Substraction ---------> R")
@@ -13,30 +15,29 @@ operation = input("\nType key of the Operation: ").lower()
 
 
 if operation != "s" and operation != "r" and operation != "m" and operation != "d":
-	print("\nERROR the Key.")
+	print("\nERROR the Key.")	
 else:
-	numOne = float(input("Type a number: "))
+	numOne = float(input("\nType a number: "))
 	numTwo = float(input("Type other number: "))
 
 	if operation == "s":
-		resultado = numOne + numTwo
-		print(f"the result of operation Sum is: {resultado}")
+	 	suma(numOne, numTwo)
 
 	elif operation == "r":
-		resultado = numOne - numTwo
-		print(f"the result of operation Substraction is: {resultado}")
-
+		resta(numOne, numTwo)
+		
 	elif operation == "m":
-		resultado = numOne * numTwo
-		print(f"the result of operation Multiplication is: {resultado}")
-
-	elif operation == "d":
+		multiplication(numOne, numTwo)
+		
+	elif operation == "d":		
 		if numOne == 0 and numTwo == 0:
 			print("\nResult is undefined")
+
 		elif numOne == 0 and numTwo != 0 or numOne != 0 and numTwo == 0:
 			print("\nCANNOT DIVIDE BY ZERO")
 		else:
-			resultado = numOne / numTwo
-			print(f"the result of operation Division is: {resultado}")
+			division(numOne, numTwo)
+			
+
 
 print("\nFinishid Operation...")
