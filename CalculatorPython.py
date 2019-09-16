@@ -1,4 +1,3 @@
-import math
 from FunctionCalcu import suma, resta, multiplication, division, banner
 
 

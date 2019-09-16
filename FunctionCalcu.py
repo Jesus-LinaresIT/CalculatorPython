@@ -1,5 +1,3 @@
-import math
-
 def banner(message, border = '-'):
 	line = border * len(message)
 	print(line)
